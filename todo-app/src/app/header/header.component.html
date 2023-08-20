@@ -1,0 +1,9 @@
+<header class="header">
+    <h1>To Do App</h1>
+    <nav>
+      <a routerLink="/register" *ngIf="isLoggedIn == false">Register</a>
+      <a routerLink="/login" *ngIf="isLoggedIn == false">Login</a>
+      <a (click)="logout()" *ngIf="isLoggedIn == true">Logout</a>
+    </nav>
+  </header>
+  

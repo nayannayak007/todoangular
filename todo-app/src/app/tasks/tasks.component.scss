@@ -1,0 +1,76 @@
+.task-container {
+    padding: 20px;
+  
+    button {
+      margin-bottom: 20px;
+    }
+  
+    .task-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 20px;
+  
+      .task-card {
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+  
+        .card-header {
+          background-color: #e0e9f0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 18px;
+          font-weight: bold;
+          padding: 10px;
+          border-radius: 8px 8px 0 0;
+  
+          .card-actions {
+            display: flex;
+  
+            button {
+              margin-left: 10px;
+            }
+          }
+        }
+  
+        .card-content {
+          display: flex;
+          justify-content: space-between;
+  
+          .card-info {
+            flex: 2;
+  
+            .description {
+              color: #333;
+            }
+  
+            .expires {
+              color: #777;
+              margin-top: 10px;
+            }
+          }
+  
+         
+        }
+        .card-status {
+            text-align: center;
+            padding: 10px;
+            border-radius: 0 0 8px 8px;
+            font-weight: bold;
+            text-transform: uppercase;
+            width: 100%;
+  
+            &.completed {
+              background-color: lightseagreen;
+            }
+  
+            &.in-progress {
+              background-color: #ffaa7c;
+            }
+          }
+      }
+    }
+  }
+  

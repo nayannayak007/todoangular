@@ -1,0 +1,29 @@
+<div class="task-container">
+    <button mat-raised-button color="primary" (click)="openCreateTaskDialog()">Create New Task</button>
+    <div class="task-list">
+      <div class="task-card" *ngFor="let task of tasks">
+        <div class="card-header">
+          {{ task.title }}
+          <div class="card-actions">
+            <button mat-icon-button (click)="editTask(task)">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button (click)="deleteTask(task)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </div>
+        <div class="card-content">
+          <div class="card-info" style="margin:5px" >
+            <p class="description">{{ task.description }}</p>
+            <p class="expires">Expires on: {{ task.dueDate | date:'shortDate' }}</p>
+          </div>
+          
+        </div>
+        <div class="card-status" [ngClass]="task.status === 'completed' ? 'completed' : 'in-progress'">
+            {{ task.status }}
+          </div>
+      </div>
+    </div>
+  </div>
+  

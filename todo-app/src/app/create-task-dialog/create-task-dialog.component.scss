@@ -1,0 +1,12 @@
+.dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  
+    .cancel-button {
+      margin-right: 10px;
+    }
+  }
+  .mat-mdc-form-field {
+    display: flex;
+  }
